@@ -1,0 +1,33 @@
+tiny_csv:
+  data_format: csv
+  data_root: ../data/test_tiny_data
+  feature_cols:
+  - active: true
+    dtype: str
+    name:
+    - time_stamp
+    - userid
+    - adgroup_id
+    - pid
+    - cate_id
+    - campaign_id
+    - customer
+    - brand
+    - price
+    - cms_segid
+    - cms_group_id
+    - final_gender_code
+    - age_level
+    - pvalue_level
+    - shopping_level
+    - occupation
+    - new_user_class_level
+    - click_sequence
+    type: categorical
+  label_col:
+    dtype: float
+    name: clk
+  min_categr_count: 1
+  test_data: ../data/test_tiny_data\test_sample.csv
+  train_data: ../data/test_tiny_data\train_sample.csv
+  valid_data: ../data/test_tiny_data\valid_sample.csv

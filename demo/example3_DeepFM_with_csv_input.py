@@ -17,6 +17,7 @@ if __name__ == '__main__':
     config_dir = './config/example3_config'
     experiment_id = 'DeepFM_test_csv' # corresponds to h5 input `data/tiny_h5`
     params = load_config(config_dir, experiment_id)
+    print("params.keys:",params.keys())
 
     # set up logger and random seed
     set_logger(params)

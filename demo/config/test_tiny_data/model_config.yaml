@@ -1,0 +1,38 @@
+Base:
+  model_root: ./checkpoints/
+  num_workers: 3
+  verbose: 1
+  early_stop_patience: 3
+  pickle_feature_encoder: true
+  save_best_only: true
+  eval_steps: null
+  debug_mode: false
+  group_id: null
+  use_features: null
+  feature_specs: null
+  feature_config: null
+DeepFM_test_tiny_csv:
+  model: DeepFM
+  dataset_id: tiny_csv
+  loss: binary_crossentropy
+  metrics:
+  - logloss
+  - AUC
+  task: binary_classification
+  optimizer: adam
+  hidden_units:
+  - 64
+  - 32
+  hidden_activations: relu
+  net_regularizer: 0
+  embedding_regularizer: 1.0e-08
+  learning_rate: 0.001
+  batch_norm: false
+  net_dropout: 0
+  batch_size: 128
+  embedding_dim: 4
+  epochs: 30
+  shuffle: true
+  seed: 2023
+  monitor: AUC
+  monitor_mode: max
